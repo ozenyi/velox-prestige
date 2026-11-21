@@ -1,0 +1,14 @@
+{
+  "name": "velox-prestige",
+  "private": true,
+  "type": "module",
+  "description": "Vitrine statique Velox Prestige — automobiles d'exception.",
+  "scripts": {
+    "build": "node build.mjs",
+    "check": "node scripts/check.mjs",
+    "preview": "node scripts/preview.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

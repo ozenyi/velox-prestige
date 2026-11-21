@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+{{> head}}
+</head>
+<body>
+<a class="skip" href="#contenu">Aller au contenu</a>
+<div class="grain" aria-hidden="true"></div>
+{{> banner}}
+{{> header}}
+<main class="legal-page" id="contenu" tabindex="-1">
+  <div class="container prose">
+    <p class="eyebrow">Données personnelles</p>
+    <h1>Politique de confidentialité</h1>
+    <p>Version du 21 novembre 2026. Elle décrit le fonctionnement réellement en place sur cette publication du site, et non un stockage imaginé.</p>
+
+    <h2>Responsable de traitement</h2>
+    <p>{{CONTROLLER}}, projet porté par {{HOLDER}}.</p>
+    <p>Adresse : {{{ADDRESS}}}</p>
+    <p>SIREN : {{{SIREN}}}</p>
+    <p>Contact pour exercer vos droits : {{{EMAIL_HTML}}}</p>
+
+    <h2>Ce qui est collecté, où, et pourquoi</h2>
+    {{{STORAGE}}}
+
+    <h2>Base légale</h2>
+    <p>Le consentement, recueilli par une case non précochée, pour la seule finalité d'être informé du lancement. Tant que les inscriptions ne sont pas ouvertes, aucune base n'est mise en œuvre parce qu'aucune donnée n'est demandée à un serveur.</p>
+
+    <h2>Destinataires</h2>
+    <p>Le responsable, et le sous-traitant décrit ci-dessus lorsqu'un stockage est actif. Pas de revente, pas de régie publicitaire, pas de réseau social embarqué.</p>
+
+    <h2>Cookies et traceurs</h2>
+    <p>Velox Prestige n'en dépose pas. Il n'y a pas d'outil de mesure d'audience tiers. Les journaux techniques de GitHub Pages, s'ils existent, sont ceux de l'hébergeur.</p>
+
+    <h2>Mineurs</h2>
+    <p>Le service s'adresse à des personnes majeures. Ne communiquez pas de données si vous avez moins de 18 ans.</p>
+  </div>
+</main>
+{{> footer}}
+</body>
+</html>

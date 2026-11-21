@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+{{> head}}
+</head>
+<body>
+<a class="skip" href="#contenu">Aller au contenu</a>
+<div class="grain" aria-hidden="true"></div>
+{{> banner}}
+<header class="hero">
+  <div class="hero-media">
+    <img src="{{BASE}}/assets/images/hero-panamera.webp" alt="" width="1600" height="1068" fetchpriority="high" decoding="async">
+  </div>
+  {{> header}}
+  <div class="hero-copy" id="contenu" tabindex="-1">
+    <p class="eyebrow">Le salon des automobiles d'exception</p>
+    <h1>Révéler<br><em>l'exception.</em></h1>
+    <p class="lede">Supercars, GT, collection et SUV de luxe. Le catalogue n'est pas encore ouvert. La recherche en langage naturel, le dépôt assisté et la cote arrivent avec le lancement.</p>
+    <div class="hero-actions">
+      <a class="btn btn-gold btn-lg" href="{{BASE}}/liste-attente.html">Rejoindre la liste</a>
+      <a class="btn btn-ghost btn-lg" href="{{BASE}}/tarifs.html">Voir les tarifs</a>
+    </div>
+  </div>
+</header>
+
+<div class="search-wrap">
+  <form class="search-card" data-search action="{{BASE}}/#recherche" method="get" role="search">
+    <label class="search-label" for="recherche-ia">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="M20 20l-3.5-3.5"/><path d="M9 11h4M11 9v4" stroke-linecap="round"/></svg>
+      Recherche IA — bientôt disponible
+    </label>
+    <div class="search-row">
+      <input class="field" id="recherche-ia" type="search" name="q" placeholder="Porsche 911 GT3 rouge, moins de 30 000 km, autour de Paris" autocomplete="off" aria-describedby="recherche-note">
+      <button class="btn btn-gold" type="submit">À venir</button>
+    </div>
+    <p class="search-note" id="recherche-note">Exemple de requête. La recherche ne consulte aucune annonce : le service ouvrira au lancement.</p>
+    <div class="search-chips">
+      <button class="chip" type="button" data-example="Supercars">Supercars</button>
+      <button class="chip" type="button" data-example="Moins de 150 000 €">Moins de 150 000 €</button>
+      <button class="chip" type="button" data-example="Île-de-France">Île-de-France</button>
+      <button class="chip" type="button" data-example="Collection">Collection</button>
+      <button class="chip" type="button" data-example="SUV de luxe">SUV de luxe</button>
+    </div>
+  </form>
+</div>
+
+<ul class="principles">
+  <li><strong>L'exception</strong><span>Luxe, sportives, collection</span></li>
+  <li><strong>Deux parcours</strong><span>Particuliers et maisons</span></li>
+  <li><strong>Tarifs publics</strong><span>Grille de lancement</span></li>
+  <li><strong>Recherche IA</strong><span>Bientôt disponible</span></li>
+</ul>
+
+<main>
+<section class="section" id="illustrations">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow" style="margin-bottom:14px">Mise en scène</p>
+        <h2>À la une, en illustration</h2>
+      </div>
+      <p class="lead">Ces photographies montrent la présentation prévue. Ce ne sont pas des annonces : aucun prix, aucun kilométrage, aucun vendeur. Rien de ce qui est montré n'est à vendre.</p>
+    </div>
+    <div class="featured-grid">
+      <article class="vehicle-card">
+        <div class="thumb">
+          <img loading="lazy" decoding="async" src="{{BASE}}/assets/images/hero-panamera.webp" alt="Porsche Panamera noire vue de l'arrière, en mouvement sur une route au crépuscule" width="1600" height="1068">
+          <div class="badges"><span class="badge">Illustration</span></div>
+        </div>
+        <div class="body">
+          <p class="meta">Visuel d'ambiance</p>
+          <h3>Porsche Panamera</h3>
+          <p class="illus-note">Exemple de présentation. Ce véhicule n'est pas proposé à la vente.</p>
+        </div>
+      </article>
+      <article class="vehicle-card">
+        <div class="thumb">
+          <img loading="lazy" decoding="async" src="{{BASE}}/assets/images/laferrari.webp" alt="Ferrari LaFerrari rouge dans un showroom clair" width="1100" height="734" style="object-position:50% 70%">
+          <div class="badges"><span class="badge">Illustration</span></div>
+        </div>
+        <div class="body">
+          <p class="meta">Visuel d'ambiance</p>
+          <h3>Ferrari LaFerrari</h3>
+          <p class="illus-note">Exemple de présentation. Ce véhicule n'est pas proposé à la vente.</p>
+        </div>
+      </article>
+      <article class="vehicle-card">
+        <div class="thumb">
+          <img loading="lazy" decoding="async" src="{{BASE}}/assets/images/huracan.webp" alt="Lamborghini Huracán blanche, vue de trois quarts avant" width="1100" height="734">
+          <div class="badges"><span class="badge">Illustration</span></div>
+        </div>
+        <div class="body">
+          <p class="meta">Visuel d'ambiance</p>
+          <h3>Lamborghini Huracán</h3>
+          <p class="illus-note">Exemple de présentation. Ce véhicule n'est pas proposé à la vente.</p>
+        </div>
+      </article>
+      <article class="vehicle-card">
+        <div class="thumb">
+          <img loading="lazy" decoding="async" src="{{BASE}}/assets/images/etype.webp" alt="Jaguar Type E série 1 coupé bleu clair, de profil, le long d'une rue" width="1200" height="578" style="object-position:center 60%">
+          <div class="badges"><span class="badge">Illustration</span></div>
+        </div>
+        <div class="body">
+          <p class="meta">Visuel d'ambiance</p>
+          <h3>Jaguar Type E</h3>
+          <p class="illus-note">Exemple de présentation. Ce véhicule n'est pas proposé à la vente.</p>
+        </div>
+      </article>
+      <article class="vehicle-card">
+        <div class="thumb">
+          <img loading="lazy" decoding="async" src="{{BASE}}/assets/images/bugatti.webp" alt="Bugatti Chiron blanche vue de face, de nuit" width="1200" height="900" style="object-position:center 30%">
+          <div class="badges"><span class="badge">Illustration</span></div>
+        </div>
+        <div class="body">
+          <p class="meta">Visuel d'ambiance</p>
+          <h3>Bugatti Chiron</h3>
+          <p class="illus-note">Exemple de présentation. Ce véhicule n'est pas proposé à la vente.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="categories" style="padding-top:20px">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow" style="margin-bottom:14px">Explorer par univers</p>
+        <h2>Catégories</h2>
+      </div>
+      <p class="lead">Quatre univers, rien d'autre. Choisir une catégorie prépare la liste d'attente : il n'y a pas encore de résultats.</p>
+    </div>
+    <div class="cat-grid">
+      <a class="cat-tile" href="{{BASE}}/liste-attente.html?parcours=particulier&amp;interet=Supercars">
+        <img loading="lazy" decoding="async" src="{{BASE}}/assets/images/bugatti.webp" alt="" width="1200" height="900" style="object-position:center 30%">
+        <div class="txt"><h3>Supercars</h3><p>Ferrari · Lamborghini · McLaren</p></div>
+      </a>
+      <a class="cat-tile" href="{{BASE}}/liste-attente.html?parcours=particulier&amp;interet=Collection">
+        <img loading="lazy" decoding="async" src="{{BASE}}/assets/images/etype.webp" alt="" width="1200" height="578" style="object-position:center 55%">
+        <div class="txt"><h3>Collection</h3><p>Youngtimers · Classiques</p></div>
+      </a>
+      <a class="cat-tile" href="{{BASE}}/liste-attente.html?parcours=particulier&amp;interet=GT">
+        <img loading="lazy" decoding="async" src="{{BASE}}/assets/images/amg-gt.webp" alt="" width="1100" height="734">
+        <div class="txt"><h3>GT</h3><p>911 · AMG · Aston Martin</p></div>
+      </a>
+      <a class="cat-tile" href="{{BASE}}/liste-attente.html?parcours=particulier&amp;interet=SUV%20de%20luxe">
+        <img loading="lazy" decoding="async" src="{{BASE}}/assets/images/range-rover.webp" alt="" width="1100" height="734" style="object-position:center 40%">
+        <div class="txt"><h3>SUV de luxe</h3><p>Range Rover · Urus · Cayenne</p></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section trust">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow" style="margin-bottom:14px">Ce que le lancement prévoira</p>
+        <h2>L'exception, exigée.</h2>
+      </div>
+      <p class="lead">Ces engagements décrivent le service à venir. Ils ne décrivent pas un catalogue déjà en ligne.</p>
+    </div>
+    <div class="trust-grid">
+      <div class="trust-item">
+        <div class="trust-ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3l8 3v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-3z"/><path d="M9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Vendeurs identifiés</h3>
+        <p>Au lancement, l'identité des particuliers sera contrôlée, et le badge professionnel suivra la vérification du SIREN.</p>
+      </div>
+      <div class="trust-item">
+        <div class="trust-ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="3" width="14" height="18" rx="1.5"/><path d="M8 8h8M8 12h8M8 16h5" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Rapport historique</h3>
+        <p>Un rapport pourra être joint à la fiche, ou proposé à l'unité. Rien de tout cela n'est commandable aujourd'hui.</p>
+      </div>
+      <div class="trust-item">
+        <div class="trust-ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Cote IA Velox</h3>
+        <p>Une estimation de marché, indicative en offre gratuite et détaillée en Premium, visible de l'acheteur et du vendeur.</p>
+      </div>
+      <div class="trust-item">
+        <div class="trust-ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="7" width="18" height="12" rx="1.5"/><path d="M3 10h18M7 15h3" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Paiement à venir</h3>
+        <p>Quand les règlements ouvriront, ils passeront par un prestataire. Velox ne stockera pas les coordonnées bancaires. Aucun paiement n'est possible ici.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pro-band">
+  <img src="{{BASE}}/assets/images/amg-port.webp" alt="" width="1600" height="1321" loading="lazy" decoding="async">
+  <div class="container">
+    <p class="eyebrow">Espace professionnels</p>
+    <h2>L'outil des maisons<br>de l'exception.</h2>
+    <p class="lede">Tableau de bord, demandes, recommandations de prix et vitrine de maison : prévus pour les galeries, importateurs et négociants. L'outil n'est pas encore ouvert.</p>
+    <div class="actions">
+      <a class="btn btn-gold btn-lg" href="{{BASE}}/tarifs.html#pros">Voir les packs Pro</a>
+      <a class="btn btn-ghost btn-lg" href="{{BASE}}/liste-attente.html?parcours=professionnel">Rejoindre en maison</a>
+    </div>
+  </div>
+</section>
+
+<section class="plus-band">
+  <div class="container">
+    <div class="plus-card">
+      <div>
+        <p class="eyebrow">Abonnement acheteur</p>
+        <h2>Velox <em class="accent">Plus</em></h2>
+        <p class="muted" style="font-weight:300;margin-bottom:8px">Pour ceux qui veulent être prévenus en premier, quand le service existera.</p>
+        <ul>
+          <li>Alertes prioritaires</li>
+          <li>Accès anticipé 24 h, si le vendeur l'ouvre</li>
+          <li>1 rapport historique par mois, cumulable jusqu'à 3</li>
+          <li>Cote détaillée et historique des baisses de prix</li>
+        </ul>
+      </div>
+      <div>
+        <p class="plus-price">12,90 €<span> / mois</span></p>
+        <p class="dim" style="margin:10px 0 8px;font-size:13px">ou 129 € / an · 2 mois offerts</p>
+        <p class="dim" style="margin:0 0 22px;font-size:13px">Tarif de lancement. La souscription n'est pas ouverte.</p>
+        <a class="btn btn-gold btn-lg" href="{{BASE}}/tarifs.html#plus">Découvrir Velox Plus</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+{{> footer}}
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+{{> head}}
+</head>
+<body>
+<a class="skip" href="#contenu">Aller au contenu</a>
+<div class="grain" aria-hidden="true"></div>
+{{> banner}}
+{{> header}}
+<header class="page" id="contenu" tabindex="-1">
+  <div class="container">
+    <p class="eyebrow">Liste d'attente</p>
+    <h1>Être informé<br>du <em class="accent">lancement.</em></h1>
+    <p class="lede">Deux parcours, une seule finalité : vous écrire quand Velox Prestige ouvrira. Pas de compte, pas de paiement, pas de prospection.</p>
+  </div>
+</header>
+<main class="section" style="padding-top:36px">
+  <div class="container" style="max-width:820px">
+    {{{FORM_NOTICE}}}
+    <div class="path-switch" role="tablist" aria-label="Parcours" data-tabs>
+      <button type="button" role="tab" id="tab-pro" aria-controls="panel-pro" aria-selected="true">Professionnels</button>
+      <button type="button" role="tab" id="tab-part" aria-controls="panel-part" aria-selected="false" tabindex="-1">Particuliers</button>
+    </div>
+
+    <div id="panel-pro" role="tabpanel" aria-labelledby="tab-pro" tabindex="0">
+      <form class="form-grid two" data-waitlist data-parcours="professionnel" id="professionnel" action="{{BASE}}/liste-attente.html" method="post" novalidate>
+        <div class="visually-hidden">
+          <label for="pro-hp">Ne pas remplir ce champ</label>
+          <input id="pro-hp" name="vx_hp" type="text" tabindex="-1" autocomplete="off" data-honeypot>
+        </div>
+        <div>
+          <label for="pro-societe">Société</label>
+          <input class="field" id="pro-societe" name="societe" type="text" autocomplete="organization" required>
+        </div>
+        <div>
+          <label for="pro-nom">Nom</label>
+          <input class="field" id="pro-nom" name="nom" type="text" autocomplete="name" required>
+        </div>
+        <div>
+          <label for="pro-email">E-mail</label>
+          <input class="field" id="pro-email" name="email" type="email" autocomplete="email" required>
+        </div>
+        <div>
+          <label for="pro-tel">Téléphone <span class="optional">(facultatif)</span></label>
+          <input class="field" id="pro-tel" name="telephone" type="tel" autocomplete="tel">
+        </div>
+        <div>
+          <label for="pro-ville">Ville</label>
+          <input class="field" id="pro-ville" name="ville" type="text" autocomplete="address-level2" required>
+        </div>
+        <div>
+          <label for="pro-volume">Volume de stock approximatif</label>
+          <select class="field" id="pro-volume" name="volume" required>
+            <option value="">Choisir une fourchette</option>
+            <option>Moins de 15 véhicules</option>
+            <option>Environ 15 à 50</option>
+            <option>Environ 50 à 150</option>
+            <option>Plus de 150</option>
+            <option>Pas encore de stock</option>
+          </select>
+        </div>
+        <div class="full">
+          <label class="consent" for="pro-consent">
+            <input id="pro-consent" name="consentement" type="checkbox" value="oui" required>
+            <span>J'accepte que Velox Prestige, projet porté par Ozen Yigit, utilise ces informations uniquement pour m'informer du lancement. Je peux retirer cet accord. <a href="{{BASE}}/confidentialite.html">Politique de confidentialité</a>.</span>
+          </label>
+        </div>
+        <div class="full">
+          <button class="btn btn-gold" type="submit">Demander à être informé</button>
+          <p class="status" data-status hidden></p>
+        </div>
+      </form>
+    </div>
+
+    <div id="panel-part" role="tabpanel" aria-labelledby="tab-part" tabindex="0" hidden>
+      <form class="form-grid" data-waitlist data-parcours="particulier" id="particulier" action="{{BASE}}/liste-attente.html" method="post" novalidate>
+        <div class="visually-hidden">
+          <label for="part-hp">Ne pas remplir ce champ</label>
+          <input id="part-hp" name="vx_hp" type="text" tabindex="-1" autocomplete="off" data-honeypot>
+        </div>
+        <div>
+          <label for="p-nom">Nom</label>
+          <input class="field" id="p-nom" name="nom" type="text" autocomplete="name" required>
+        </div>
+        <div>
+          <label for="p-email">E-mail</label>
+          <input class="field" id="p-email" name="email" type="email" autocomplete="email" required>
+        </div>
+        <div>
+          <label for="p-recherche">Ce que vous recherchez</label>
+          <textarea class="field" id="p-recherche" name="recherche" required placeholder="Par exemple : une 911 à boîte manuelle, ou vendre une GT déjà à la maison."></textarea>
+        </div>
+        <div>
+          <label class="consent" for="p-consent">
+            <input id="p-consent" name="consentement" type="checkbox" value="oui" required>
+            <span>J'accepte que Velox Prestige, projet porté par Ozen Yigit, utilise ces informations uniquement pour m'informer du lancement. Je peux retirer cet accord. <a href="{{BASE}}/confidentialite.html">Politique de confidentialité</a>.</span>
+          </label>
+        </div>
+        <div>
+          <button class="btn btn-gold" type="submit">Demander à être informé</button>
+          <p class="status" data-status hidden></p>
+        </div>
+      </form>
+    </div>
+    <noscript>
+      <p class="form-banner">Sans JavaScript, le formulaire ne part pas. Rien n'est donc enregistré. La politique de confidentialité reste lisible.</p>
+    </noscript>
+  </div>
+</main>
+{{> footer}}
+</body>
+</html>
