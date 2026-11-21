@@ -11,7 +11,7 @@ Le site publié est servi à [https://ozenyi.github.io/velox-prestige/](https://
 | Accueil | Hero, recherche IA indiquée comme bientôt disponible, univers, illustrations, principes du lancement |
 | Tarifs | Grille du 21 novembre 2026, sans encaissement |
 | Liste d'attente | Parcours professionnels et particuliers |
-| Mentions légales | Éditeur, hébergeur, champs encore à compléter |
+| Mentions légales | Éditeur EURL CRISTAL, hébergeur GitHub Pages |
 | Confidentialité | Décrit le stockage réellement actif |
 | Crédits | Licences des photos et des polices |
 | 404 | Page introuvable |
@@ -60,7 +60,7 @@ VELOX_WAITLIST_ENDPOINT="https://…" node build.mjs
 
 Sur GitHub Actions, la même valeur est lue depuis la variable de dépôt `WAITLIST_ENDPOINT` (Settings → Secrets and variables → Actions → Variables). Ce n'est pas un secret : l'URL se retrouve dans le JavaScript public, comme toute adresse appelée par le navigateur.
 
-Le build refuse de partir si une URL est définie alors que `contactEmail` est vide dans [`src/site.json`](src/site.json). Renseignez aussi l'adresse postale et le SIREN avant d'ouvrir la collecte : les mentions légales affichent `[à compléter]` tant que ces champs sont vides.
+Le build refuse de partir si une URL est définie alors que `contactEmail` est vide dans [`src/site.json`](src/site.json). Cette adresse est déjà `contact@velox-prestige.com`.
 
 Champs envoyés, en JSON :
 
@@ -75,7 +75,7 @@ Un champ honeypot (`vx_hp`) doit rester vide. La case de consentement n'est pas 
 2. Extensions → Apps Script, coller le script ci-dessous, et remplacer `SHEET_ID` par l'identifiant du tableur (la partie de l'URL entre `/d/` et `/edit`).
 3. Déployer : **Déployer → Nouveau déploiement → Application web**. Exécuter en tant que soi, accès : **Tous les utilisateurs**.
 4. Copier l'URL qui se termine par `/exec`.
-5. La poser dans `WAITLIST_ENDPOINT`, remplir `contactEmail` dans `src/site.json`, puis laisser le workflow reconstruire le site.
+5. La poser dans `WAITLIST_ENDPOINT`, puis laisser le workflow reconstruire le site. `contactEmail` est déjà renseigné.
 
 ```javascript
 const SHEET_ID = "REMPLACER_PAR_L_ID_DU_TABLEUR";
@@ -115,7 +115,7 @@ Le navigateur envoie le JSON en `text/plain` et ne peut pas lire la réponse de 
 
 1. Créer un formulaire sur [formspree.io](https://formspree.io).
 2. Copier l'URL `https://formspree.io/f/xxxxxxxx`.
-3. La poser dans `WAITLIST_ENDPOINT` et renseigner `contactEmail`.
+3. La poser dans `WAITLIST_ENDPOINT`. `contactEmail` est déjà renseigné.
 
 Le site envoie un `POST` `application/json` avec l'en-tête `Accept: application/json`. Formspree stocke la demande et peut l'envoyer par e-mail. La politique de confidentialité nomme alors Formspree comme sous-traitant.
 
@@ -123,14 +123,9 @@ Le site envoie un `POST` `application/json` avec l'en-tête `Accept: application
 
 Toute URL HTTPS dont l'hôte n'est ni `formspree.io` ni `script.google.com` reçoit le même JSON, et la politique indique l'hôte. Le responsable doit pouvoir dire, sur demande, qui stocke les données et dans quel pays.
 
-## Identité à compléter
+## Éditeur
 
-Dans [`src/site.json`](src/site.json) :
-
-- `contactEmail` — obligatoire dès que les inscriptions sont branchées
-- `postalAddress`
-- `siren`
-- `director` et `holder` — déjà « Ozen Yigit »
+EURL CRISTAL, EURL au capital de 2&nbsp;000&nbsp;€, 7 rue Bernard Palissy, 45800 Saint-Jean-de-Braye. SIREN 804&nbsp;380&nbsp;582. Directeur de la publication : Ozen Yigit, gérant. Contact : contact@velox-prestige.com. Ces informations sont dans [`src/site.json`](src/site.json) et sur les pages Mentions légales et Confidentialité.
 
 ## Photos et polices
 

@@ -597,6 +597,41 @@ h1, h2, h3, .serif { font-family: var(--font-serif); font-weight: 400; letter-sp
 }
 .price-card li .tick { color: var(--gold); }
 .price-card li.off, .price-card li.off .tick { color: var(--dim); }
+.soon {
+  display: inline-block;
+  flex-shrink: 0;
+  margin-top: 2px;
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-2);
+  border: 1px solid var(--gold-line);
+  padding: 1px 6px;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+.included-label {
+  margin: 4px 0 8px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.grid-notice {
+  width: calc(100% - 40px);
+  margin: 28px auto 0;
+  border: 1px solid var(--gold);
+  background: #16120c;
+  padding: 20px 22px;
+  color: var(--ivory);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.55;
+}
+ul.soon-list li:before { content: none; }
+ul.soon-list li { align-items: flex-start; }
 .price-card .btn { width: 100%; margin-top: 22px; }
 .price-card .annual { font-size: 12px; color: var(--dim); text-align: center; margin-top: 10px; }
 .upsell h3 { font-size: 24px; margin: 12px 0 8px; }
