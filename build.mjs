@@ -174,7 +174,7 @@ function preloadHero(basePath) {
 }
 
 function storageHtml(kind, url) {
-  const rights = `Vous pouvez demander l'accès, la rectification, l'effacement, la limitation, l'opposition et, le cas échéant, la portabilité, ainsi que retirer votre consentement à tout moment. Ces droits s'exercent auprès de ${escapeHtml(site.holder)} à l'adresse indiquée dans les <a href="${base}/mentions-legales.html">mentions légales</a>. Vous pouvez aussi saisir la CNIL (cnil.fr).`;
+  const rights = `Vous pouvez demander l'accès, la rectification, l'effacement, la limitation, l'opposition et, le cas échéant, la portabilité, ainsi que retirer votre consentement à tout moment. Ces droits s'exercent auprès d'${escapeHtml(site.controller)} à l'adresse indiquée dans les <a href="${base}/mentions-legales.html">mentions légales</a>. Vous pouvez aussi saisir la CNIL (cnil.fr).`;
   const purpose = `La seule finalité est de vous informer du lancement de Velox Prestige. Les données ne sont pas utilisées pour de la publicité, de la prospection tierce, ni pour établir un profil commercial.`;
   const duration = `Durée de conservation prévue : jusqu'à l'envoi de l'information de lancement, puis trois mois, et au plus tard trente-six mois après l'inscription. Vous pouvez demander l'effacement avant.`;
   const fields = `Champs concernés : pour un professionnel, la société, le nom, l'adresse e-mail, le téléphone s'il est renseigné, la ville et le volume de stock approximatif ; pour un particulier, le nom, l'adresse e-mail et ce qui est recherché. Un champ anti-spam (honeypot) est ignoré s'il est rempli. La case de consentement, non précochée, est enregistrée avec la demande.`;
